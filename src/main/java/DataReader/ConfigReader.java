@@ -1,5 +1,7 @@
-package org.functions.Utility;
+package DataReader;
 
+import UtilityManager.BrowserFactory;
+import UtilityManager.Logger;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -23,9 +25,9 @@ public class ConfigReader {
         public static String getconfigvalue(String keyName) throws Exception {
             try {
                 String configFilePath = System.getProperty("user.dir")+ "/src/main/resources/"+env+"/appConfig.json";
+                Logger.info("appConfig.json file path: "+configFilePath);
                 if(configData  == null){
                     configData = objectMapper.readValue(new File(configFilePath),new TypeReference<Map<String,Object>>(){});
-
                 }
                 return (String) configData.get(keyName);
             } catch (IOException e) {
@@ -33,5 +35,4 @@ public class ConfigReader {
             }
         }
     }
-
 }

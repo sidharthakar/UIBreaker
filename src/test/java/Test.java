@@ -1,15 +1,23 @@
-import org.functions.Utility.BrowserFactory;
-import org.functions.Utility.ConfigReader;
-import org.functions.Utility.DriverManager;
+import Enums.TestCaseType;
+import Enums.TestType;
+import UtilityManager.BrowserFactory;
+import UtilityManager.DriverManager;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
-import java.text.BreakIterator;
+import java.sql.Driver;
+
 
 public class Test {
-
+    @BeforeTest
+    public void setUp() throws Exception {
+        BrowserFactory.launchApplication("URL");
+    }
+    @TestType(Type = TestCaseType.REGRESSION)
     @org.testng.annotations.Test
     public void test() throws Exception {
-        BrowserFactory.launchApplication("URL");
+       System.out.println(DriverManager.getDriver().getCurrentUrl());
     }
     @AfterTest
     public void tearDown() throws Exception {

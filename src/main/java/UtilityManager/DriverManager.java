@@ -1,4 +1,4 @@
-package org.functions.Utility;
+package UtilityManager;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

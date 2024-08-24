@@ -13,6 +13,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.3.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>suites/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <systemPropertyVariables>
+                    <browser>${browser}</browser>
+                </systemPropertyVariables>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+                        </property>
+                    </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -59,6 +77,38 @@
            <groupId>com.ainrif.apiator</groupId>
            <artifactId>jakson-plugin-core-json-renderer</artifactId>
            <version>0.15.1</version>
+       </dependency>
+       <dependency>
+           <groupId>io.qameta.allure</groupId>
+           <artifactId>allure-testng</artifactId>
+           <version>2.29.0</version>
+       </dependency>
+       <!-- ReportNG dependency -->
+       <dependency>
+           <groupId>org.uncommons</groupId>
+           <artifactId>reportng</artifactId>
+           <version>1.1.4</version>
+       </dependency>
+       <!-- Guice dependency (required by ReportNG) -->
+       <dependency>
+           <groupId>com.google.inject</groupId>
+           <artifactId>guice</artifactId>
+           <version>5.1.0</version>
+       </dependency>
+       <dependency>
+           <groupId>org.apache.logging.log4j</groupId>
+           <artifactId>log4j-core</artifactId>
+           <version>3.0.0-beta2</version>
+       </dependency>
+       <dependency>
+           <groupId>org.apache.logging.log4j</groupId>
+           <artifactId>log4j-api</artifactId>
+           <version>3.0.0-beta2</version>
+       </dependency>
+       <dependency>
+           <groupId>com.github.javafaker</groupId>
+           <artifactId>javafaker</artifactId>
+           <version>1.0.2</version>
        </dependency>
    </dependencies>
 
