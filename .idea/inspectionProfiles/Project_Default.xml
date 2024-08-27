@@ -6,15 +6,18 @@
       <option name="ignoredModules">
         <list>
           <option value="AutomateUI" />
+          <option value="AutomateUI" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="com.fasterxml.jackson.core:jackson-databind:2.11.3" />
+          <option value="org.yaml:snakeyaml:1.23" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
       </option>

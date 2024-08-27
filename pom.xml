@@ -5,8 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>AutomateUI</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>UIBreaker</artifactId>
+    <version>1.0.0</version>
+    <developers>
+        <developer>
+            <id>UIBreaker</id>
+            <name>SIDHARTHA KAR</name>
+            <email>sidharthashankarkar@gmail.com</email>
+            <timezone>India</timezone>
+        </developer>
+    </developers>
     <build>
         <plugins>
             <plugin>

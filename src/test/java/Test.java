@@ -1,3 +1,4 @@
+import Enums.TestCaseID;
 import Enums.TestCaseType;
 import Enums.TestType;
 import UtilityManager.BrowserFactory;
@@ -14,6 +15,7 @@ public class Test {
     public void setUp() throws Exception {
         BrowserFactory.launchApplication("URL");
     }
+    @TestCaseID(TestCase_ID = "123456")
     @TestType(Type = TestCaseType.REGRESSION)
     @org.testng.annotations.Test
     public void test() throws Exception {
@@ -23,4 +25,5 @@ public class Test {
     public void tearDown() throws Exception {
         BrowserFactory.tearDownBrowser();
     }
+
 }

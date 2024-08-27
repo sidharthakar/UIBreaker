@@ -1,5 +1,7 @@
 package Listeners;
 
+import DataReader.TestCaseIDResult;
+import Enums.TestCaseID;
 import Enums.TestCaseType;
 import Enums.TestType;
 import UtilityManager.DriverManager;
@@ -33,8 +35,16 @@ public class ReportListener implements ISuiteListener, ITestListener {
         FileOutputStream fos = null;
         try {
             File allurePropsFile = new File("target/allure-results/allure.properties");
+            if (!allurePropsFile.exists()) {
+                System.out.println("Creating new allure.properties file.");
+            } else {
+                System.out.println("allure.properties file exists, updating it.");
+            }
+
             fos = new FileOutputStream(allurePropsFile);
             props.store(fos, "Allure Report Configuration");
+
+            System.out.println("Allure report name set to: " + reportName);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -49,6 +59,7 @@ public class ReportListener implements ISuiteListener, ITestListener {
     }
 
 
+
     public void onStart(ISuite suite) {
             setAllureReportName("UIBreaker Report"+ LocalDateTime.now());
             Logger.info("UIBreaker Test Started" + suite.getXmlSuite().getName() + " " + suite.getName()
@@ -57,6 +68,7 @@ public class ReportListener implements ISuiteListener, ITestListener {
 
     public void onFinish(ISuite suite) {
         DriverManager.unloadDriver();
+        setAllureReportName("UIBreaker Report");
 
 
     }
@@ -75,15 +87,19 @@ public class ReportListener implements ISuiteListener, ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         Logger.info("Test Completed " + result.getMethod().getMethodName());
+        Allure.parameter("Test Case ID" ,result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(TestCaseID.class));
         byte[] screenshot = ((TakesScreenshot)DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
         Allure.addAttachment("Success Test "+result.getMethod().getMethodName(),new ByteArrayInputStream(screenshot));
+        TestCaseIDResult.testcaseIdresult.put(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(TestCaseID.class),result.getStatus());
     }
     @Override
     public void onTestFailure(ITestResult result) {
         Logger.info("Test Failed " + result.getMethod().getMethodName());
+        Allure.parameter("Test Case ID" ,result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(TestCaseID.class));
         byte[] screenshot = ((TakesScreenshot)DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
         Allure.addAttachment("Failed Test "+result.getMethod().getMethodName(),new ByteArrayInputStream(screenshot));
         Allure.addAttachment("Failed TestCaseType : -" , result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(TestType.class).Type().toString());
+        TestCaseIDResult.testcaseIdresult.put(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(TestCaseID.class),result.getStatus());
     }
 
 
