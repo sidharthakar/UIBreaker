@@ -37,18 +37,7 @@ This is a Java-based automation testing framework that uses Selenium WebDriver a
 - **Contributing**: Guidelines for contributing to the project.
 - **License**: Notes on the licensing of the project.
 
-### selenium-testng-framework/
-  │
-  ├── src/
-  │   ├── main/
-  │   └── test/
-  │       ├── java/
-  │       └── resources/
-  │
-  ├── pom.xml
-  ├── README.md
-  └── target/
-  └── allure-results/
+
 ### Run Command 
 >mvn test -Denv=env -Dbrowser=browser -DsuiteXml=suites/xmlname.xml
 
