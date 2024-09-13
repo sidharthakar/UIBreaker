@@ -1,43 +1,24 @@
-# UIBreaker
-# Java Selenium TestNG Framework
-
-This is a Java-based automation testing framework that uses Selenium WebDriver and TestNG. The framework is designed to run UI tests and generate detailed test reports using Allure. It supports capturing screenshots for both passed and failed test cases and includes custom annotations for test case identification and categorization.
-
-## Features
-
-- **Selenium WebDriver**: Automates browser actions for UI testing.
-- **TestNG**: Provides flexible test configuration and execution.
-- **Allure Reporting**: Generates rich and interactive test reports.
-- **Screenshot Capture**: Automatically captures screenshots for both passed and failed test cases.
-- **Custom Annotations**: Includes `@TestCaseID` and `@TestCaseType` annotations for better test case management.
-
-## Setup
-
-### Prerequisites
-
-- **Java**: Ensure that Java 8 or higher is installed.
-- **Maven**: Ensure that Maven is installed and configured.
-- **Allure**: Install Allure Commandline to generate and view reports locally.
-
-### Installation
-
-1. Clone this repository to your local machine.
-   ```bash
-   git clone https://github.com/your-repo/selenium-testng-framework.git
-   cd selenium-testng-framework
-### Key Points Covered:
-
-- **Project Description**: Describes what the framework is and what it does.
-- **Setup Instructions**: Explains how to set up the project locally.
-- **Test Execution**: Instructions for running tests with Maven.
-- **Allure Reporting**: Steps to generate and view Allure reports locally.
-- **Custom Annotations**: Explanation of the custom annotations provided in the framework.
-- **Screenshot Capture**: Notes on how screenshots are captured and included in reports.
-- **Folder Structure**: Overview of the project's folder structure.
-- **Contributing**: Guidelines for contributing to the project.
-- **License**: Notes on the licensing of the project.
+# 💫 About Me:
+I am a passionate Software Development Engineer in Test (SDET) <br>with expertise in designing, building, and automating scalable test frameworks.<br>My experience spans across various technologies and languages, including<br>Java,JavaScript, and cloud testing environments like AWS. <br>I enjoy solving complex testing challenges to ensure product quality and system efficiency. <br>Collaboration and continuous learning drive me, and I’m always keen on improving automation <br>strategies and contributing to open-source testing tools while staying <br>up-to-date with industry trends.
 
 
-### Run Command 
->mvn test -Denv=env -Dbrowser=browser -DsuiteXml=suites/xmlname.xml
+## 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sidhartha-kar-sde/) 
 
+# 💻 Tech Stack:
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white) ![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Bitbucket](https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=sidharthakar&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=sidharthakar&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=sidharthakar&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=sidharthakar&limit=5&theme=dark&combine_all_yearly_contributions=true)
+
+---
+[![](https://visitcount.itsvg.in/api?id=sidharthakar&icon=4&color=4)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
