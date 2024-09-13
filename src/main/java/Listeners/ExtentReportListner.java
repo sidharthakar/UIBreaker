@@ -14,7 +14,7 @@ public class ExtentReportListner implements ITestListener, ISuiteListener {
 
         // Configure the Extent Spark Reporter
         public static ExtentReports configureReport() {
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/ExtentSparkReport.html");
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/target/ExtentSparkReport.html");
             sparkReporter.config().setDocumentTitle("Automation Test Report");
             sparkReporter.config().setReportName("Test Results");
             sparkReporter.config().setTheme(Theme.DARK); // You can choose Theme.STANDARD or Theme.DARK

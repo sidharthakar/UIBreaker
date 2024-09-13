@@ -26,7 +26,8 @@
                         <suiteXmlFile>suites/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                    <browser>${browser}</browser>
+                        <browser>${browser}</browser>
+                        <env>${env}</env>
                 </systemPropertyVariables>
                     <properties>
                         <property>
