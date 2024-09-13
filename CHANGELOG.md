@@ -1,4 +1,4 @@
-UIBreaker Chnages
+UIBreaker Changes
 
 # Java Selenium TestNG Framework
 
