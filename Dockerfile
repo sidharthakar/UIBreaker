@@ -38,11 +38,11 @@ COPY . .
 # Ensure Maven dependencies are downloaded
 RUN mvn clean install -DskipTests
 
-# Command to run the tests
-CMD ["sh", "-c", "mvn test -Denv=qa -Dbrowser=headless -DsuiteXml=suites/testng.xml && allure generate /usr/src/app/target/allure-results --clean && allure serve /usr/src/app/target/allure-results"]
+# Command to run tests and generate Allure report
+CMD ["sh", "-c", "mvn test -Denv=qa -Dbrowser=headless -DsuiteXml=suites/testng.xml && allure generate /usr/src/app/target/allure-results --clean && cp -r /usr/src/app/target/allure-report /usr/src/app/allure-report && python3 -m http.server 8080 --directory /usr/src/app/allure-report"]
 
-# Set up Allure results directory in a volume (optional if you want to persist Allure results)
-VOLUME ["/usr/src/app/target/allure-results"]
+# Volume for Allure results
+#VOLUME ["/usr/src/app/target/allure-results"]
 
-# Expose ports if needed for Allure server (optional)
-EXPOSE 4040
+# Expose port for the Allure report
+#EXPOSE 4040
