@@ -5,7 +5,8 @@ public enum Browsers {
     CHROME,
     FIREFOX,
     EDGE,
-    SAFARI;
+    SAFARI,
+    HEADLESS;
 
     public static boolean isValidBrowser(String browser) {
         try {

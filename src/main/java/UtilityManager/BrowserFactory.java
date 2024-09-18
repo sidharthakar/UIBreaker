@@ -41,6 +41,19 @@ public class BrowserFactory {
                 case "ie":
                     DriverManager.setDriver(new InternetExplorerDriver());
                     break;
+                case "headless":
+                    ChromeOptions headlessoptions = new ChromeOptions();
+                    headlessoptions.addArguments("--headless=new");
+                    headlessoptions.addArguments("--no-sandbox");
+                    headlessoptions.addArguments("--disable-dev-shm-usage");
+                    headlessoptions.addArguments("--disable-gpu");
+                    // Disable popup blocking and ignore certificate errors
+                    headlessoptions.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
+                    headlessoptions.addArguments("ignore-certificate-errors");
+                    // Define window size
+                    headlessoptions.addArguments("window-size=1920,1080");
+                    DriverManager.setDriver(new ChromeDriver(headlessoptions));
+                    break;
 
                 default:
                     throw new UnsupportedOperationException("Unsupported browser: " + BrowserFactory.browser);
