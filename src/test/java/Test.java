@@ -1,3 +1,5 @@
+import DataReader.ConfigReader;
+import Enums.Browsers;
 import Enums.TestCaseID;
 import Enums.TestCaseType;
 import Enums.TestType;
@@ -11,8 +13,10 @@ import java.sql.Driver;
 
 
 public class Test {
-    @BeforeTest
+    @org.testng.annotations.Test
     public void setUp() throws Exception {
+        System.setProperty(BrowserFactory.browser,"Chrome");
+        System.setProperty(ConfigReader.ReadConfig.env,"qa");
         BrowserFactory.launchApplication("URL");
     }
     @TestCaseID(TestCase_ID = "123456")

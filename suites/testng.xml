@@ -5,9 +5,9 @@
         <listener class-name="Listeners.ReportListener"/>
         <listener class-name="Listeners.ExtentReportListner"/>
     </listeners>
-    <test verbose="2" preserve-order="true" name="TEST">
+    <test verbose="2" preserve-order="true" name="AssesmentTest">
         <classes>
-        <class name="Test"/>
+        <class name="BitGo.BitcoinExplorer"/>
     </classes>
     </test>
 </suite>
