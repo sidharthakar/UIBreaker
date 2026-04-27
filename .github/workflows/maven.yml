@@ -67,7 +67,7 @@ jobs:
       # 9. Generate Allure Report
       - name: Generate Allure Report
         run: |
-          allure generate target/allure-results --clean -o target/allure-report
+          allure generate target/allure-results --clean -o target/allure-report --single-file
 
       # 10. Upload Allure Report
       - name: Upload Allure Report
