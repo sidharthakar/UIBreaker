@@ -46,10 +46,10 @@ public class BrowserFactory {
                     headlessoptions.addArguments("--headless=new");
                     headlessoptions.addArguments("--no-sandbox");
                     headlessoptions.addArguments("--disable-dev-shm-usage");
-                    headlessoptions.addArguments("--disable-gpu");
+                    headlessoptions.addArguments("--remote-allow-origins=*");
+                    headlessoptions.addArguments("--ignore-certificate-errors");
                     // Disable popup blocking and ignore certificate errors
                     headlessoptions.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
-                    headlessoptions.addArguments("ignore-certificate-errors");
                     // Define window size
                     headlessoptions.addArguments("window-size=1920,1080");
                     DriverManager.setDriver(new ChromeDriver(headlessoptions));
