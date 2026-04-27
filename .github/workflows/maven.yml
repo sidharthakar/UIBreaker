@@ -1,11 +1,27 @@
 name: UI Automation (Maven + Allure)
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
   workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run"
+        required: true
+        default: "main"
+        
+      environment:
+        description: "Environment (qa/stage/prod)"
+        required: true
+        default: "qa"
+        
+      browser:
+        description: "Browser (headless/chrome)"
+        required: true
+        default: "headless"
+        
+      suite:
+        description: "TestNG suite file"
+        required: true
+        default: "suites/testng.xml"
 
 jobs:
   automation-test:
@@ -44,10 +60,10 @@ jobs:
       # 6. Run TestNG tests
       - name: Run TestNG tests
         run: |
-          mvn clean test \
-          -Denv=qa \
-          -Dbrowser=headless \
-          -DsuiteXml=suites/testng.xml
+            mvn test \
+              -Denv=${{ github.event.inputs.environment }} \
+              -Dbrowser=${{ github.event.inputs.browser }} \
+              -DsuiteXml=${{ github.event.inputs.suite }}
 
       # 7. Upload Allure Results
       - name: Upload Allure Results
